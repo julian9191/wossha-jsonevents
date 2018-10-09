@@ -10,7 +10,7 @@ public class SavePictureEvent  extends Event {
 	private static final long serialVersionUID = 9007972284210976330L;
 	
     private Message message;
-    private static String eventName = "SavePicture";
+    private static String eventName = "SAVE-PICTURE";
 
     public SavePictureEvent() {}
 
