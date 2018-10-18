@@ -12,14 +12,16 @@ public class Message implements Serializable{
 	private String type;
 	private Integer fileSize;
 	private String value;
+	private String uuidPictureToRemove;
 	
-	public Message(String uuidPicture, String name, String fileType, String type, Integer fileSize, String value) {
+	public Message(String uuidPicture, String name, String fileType, String type, Integer fileSize, String value, String uuidPictureToRemove) {
 		this.uuidPicture = uuidPicture;
 		this.name = name;
 		this.fileType = fileType;
 		this.type = type;
 		this.fileSize = fileSize;
 		this.value = value;
+		this.uuidPictureToRemove = uuidPictureToRemove;
 	}
 
 	public Message() {}
@@ -71,6 +73,16 @@ public class Message implements Serializable{
 	public void setValue(String value) {
 		this.value = value;
 	}
+
+	public String getUuidPictureToRemove() {
+		return uuidPictureToRemove;
+	}
+
+	public void setUuidPictureToRemove(String uuidPictureToRemove) {
+		this.uuidPictureToRemove = uuidPictureToRemove;
+	}
+	
+	
 	
 	
 }
