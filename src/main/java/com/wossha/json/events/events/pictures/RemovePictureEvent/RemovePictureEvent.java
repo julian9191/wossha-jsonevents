@@ -1,7 +1,5 @@
 package com.wossha.json.events.events.pictures.RemovePictureEvent;
 
-import org.joda.time.DateTime;
-
 import com.wossha.json.events.events.api.Event;
 
 //@Generated("org.jsonschema2pojo")

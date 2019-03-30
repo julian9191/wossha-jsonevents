@@ -1,88 +1,31 @@
 package com.wossha.json.events.events.pictures.SavePictureEvent;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Message implements Serializable{
 
 	private static final long serialVersionUID = 630598882713518981L;
+	private List<PictureInfo> pictures = new ArrayList<PictureInfo>();
 	
-	private String uuidPicture;
-	private String name;
-	private String fileType;
-	private String type;
-	private Integer fileSize;
-	private String value;
-	private String uuidPictureToRemove;
-	
-	public Message(String uuidPicture, String name, String fileType, String type, Integer fileSize, String value, String uuidPictureToRemove) {
-		this.uuidPicture = uuidPicture;
-		this.name = name;
-		this.fileType = fileType;
-		this.type = type;
-		this.fileSize = fileSize;
-		this.value = value;
-		this.uuidPictureToRemove = uuidPictureToRemove;
+	public Message(List<PictureInfo> pictures) {
+		super();
+		this.pictures = pictures;
 	}
 
 	public Message() {}
 
-	public String getUuidPicture() {
-		return uuidPicture;
+	public List<PictureInfo> getPictures() {
+		return pictures;
 	}
 
-	public void setUuidPicture(String uuidPicture) {
-		this.uuidPicture = uuidPicture;
+	public void setPictures(List<PictureInfo> pictures) {
+		this.pictures = pictures;
 	}
 
-	public String getName() {
-		return name;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getFileType() {
-		return fileType;
-	}
-
-	public void setFileType(String fileType) {
-		this.fileType = fileType;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public Integer getFileSize() {
-		return fileSize;
-	}
-
-	public void setFileSize(Integer fileSize) {
-		this.fileSize = fileSize;
-	}
-
-	public String getValue() {
-		return value;
-	}
-
-	public void setValue(String value) {
-		this.value = value;
-	}
-
-	public String getUuidPictureToRemove() {
-		return uuidPictureToRemove;
-	}
-
-	public void setUuidPictureToRemove(String uuidPictureToRemove) {
-		this.uuidPictureToRemove = uuidPictureToRemove;
-	}
-	
-	
-	
 	
 }
